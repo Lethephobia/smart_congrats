@@ -1,0 +1,12 @@
+[package]
+name = "smart_congrats_domain"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "smart_congrats_domain"
+path = "src/lib.rs"
+
+[dependencies]
+

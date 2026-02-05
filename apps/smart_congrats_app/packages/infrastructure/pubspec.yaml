@@ -1,0 +1,7 @@
+name: smart_congrats_infrastructure
+publish_to: none
+
+environment:
+  sdk: ^3.9.2
+
+resolution: workspace

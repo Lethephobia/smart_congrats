@@ -1,0 +1,11 @@
+name: smart_congrats_app
+publish_to: none
+
+environment:
+  sdk: ^3.9.2
+
+workspace:
+  - packages/application
+  - packages/infrastructure
+  - packages/presentation
+  - packages/foundation

@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+
+# Rust / Cargo
+target/
+**/target/
+Cargo.lock
+
+# Anchor / Solana
+.anchor/
+**/.anchor/
+test-ledger/
+**/.solana/
+node_modules/
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+**/build/
+.metadata
+.fvm/
+coverage/
+apps/smart_congrats_app/pubspec.lock
+
+# IDE
+.idea/
+.vscode/
