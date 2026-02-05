@@ -1,0 +1,43 @@
+name: Rust CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  cargo:
+    name: Cargo (${{ matrix.workspace }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        workspace: [sdk, onchain]
+    defaults:
+      run:
+        working-directory: ${{ matrix.workspace }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            ${{ matrix.workspace }} -> target
+
+      - name: Format
+        run: cargo fmt --all --check
+
+      - name: Build
+        run: cargo build --workspace --all-targets
+
+      - name: Clippy
+        run: cargo clippy --workspace --all-targets

@@ -11,4 +11,3 @@ pub mod types {
     #[derive(Clone, Copy, Debug, Eq, PartialEq, Hash)]
     pub struct Hash32(pub [u8; 32]);
 }
-
