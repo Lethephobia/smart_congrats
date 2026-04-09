@@ -21,7 +21,7 @@ custom-panic = []
 
 
 [dependencies]
-anchor-lang = "0.32.1"
+anchor-lang = "1.0.0"
 smart_congrats_application = { path = "../../crates/application" }
 
 
