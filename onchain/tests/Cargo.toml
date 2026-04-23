@@ -6,5 +6,5 @@ edition = "2021"
 rust-version = "1.89.0"
 
 [dependencies]
-anchor-client = "0.32.1"
+anchor-client = "1.0.1"
 smart_congrats = { version = "0.1.0", path = "../programs/smart_congrats" }
